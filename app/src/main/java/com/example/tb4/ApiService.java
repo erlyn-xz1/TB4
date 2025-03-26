@@ -11,18 +11,18 @@ import retrofit2.http.PUT;
 import retrofit2.http.Path;
 
 public interface ApiService {
-    @POST("residuos-create") // Corresponde a tu función de Netlify para crear
+    @POST("residuos-create") //    Crear un nuevo residuo
     Call<Residuo> crearResiduo(@Body Residuo residuo);
 
-    @GET("residuos-read") // Corresponde a tu función de Netlify para leer todos
+    @GET("residuos-read") //    Leer los residuos
     Call<List<Residuo>> obtenerResiduos();
 
-    @GET("residuos-read/{id}") // Corresponde a tu función de Netlify para leer uno por ID
+    @GET("residuos-read/{id}") //  Leer un residuo por ID ingresado
     Call<Residuo> obtenerResiduo(@Path("id") int id);
 
-    @PUT("residuos-update/{id}") // Corresponde a tu función de Netlify para actualizar
+    @PUT("residuos-update/{id}") //   Actualizar un residuo por ID
     Call<Residuo> actualizarResiduo(@Path("id") int id, @Body Residuo residuo);
 
-    @DELETE("residuos-delete/{id}") // Corresponde a tu función de Netlify para eliminar
+    @DELETE("residuos-delete/{id}") //  Eliminar un residuo por ID
     Call<Void> eliminarResiduo(@Path("id") int id);
 }
