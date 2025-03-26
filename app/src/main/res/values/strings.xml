@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TB4</string>
+    <string-array name="tipos_residuo">
+        <item>Papel</item>
+        <item>Plástico</item>
+        <item>Vidrio</item>
+        <item>Metal</item>
+        <item>Orgánico</item>
+        <item>Otro</item>
+    </string-array>
+</resources>

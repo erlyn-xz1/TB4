@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".InformeActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*">
+
+            <TableRow
+                android:background="#E0E0E0">
+
+                <TextView
+                    android:text="ID"
+                    android:padding="8dp"
+                    android:background="@drawable/cell_border"/>
+
+                <TextView
+                    android:text="Nombre"
+                    android:padding="8dp"
+                    android:background="@drawable/cell_border"/>
+
+                <TextView
+                    android:text="Tipo"
+                    android:padding="8dp"
+                    android:background="@drawable/cell_border"/>
+
+                <TextView
+                    android:text="Descripción"
+                    android:padding="8dp"
+                    android:background="@drawable/cell_border"/>
+
+            </TableRow>
+
+        </TableLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnActualizar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Actualizar"
+                android:layout_marginHorizontal="4dp"/>
+
+            <Button
+                android:id="@+id/btnModificar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Modificar"
+                android:layout_marginHorizontal="4dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/btnEliminar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Eliminar"
+                android:layout_marginHorizontal="4dp"/>
+
+            <Button
+                android:id="@+id/btnPdf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="PDF"
+                android:layout_marginHorizontal="4dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
