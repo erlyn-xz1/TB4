@@ -40,7 +40,6 @@ public class Residuo {
         return descripcion;
     }
 
-    // Setters (si necesitas modificar los valores después de la creación)
     public void setId(int id) {
         this.id = id;
     }

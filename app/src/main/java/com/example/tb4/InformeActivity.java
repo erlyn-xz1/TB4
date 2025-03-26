@@ -78,7 +78,7 @@ public class InformeActivity extends AppCompatActivity {
     }
 
     private void mostrarDatos() {
-        tableLayout.removeViews(1, tableLayout.getChildCount() - 1); // Limpiar filas de datos
+        tableLayout.removeViews(1, tableLayout.getChildCount() - 1);
 
         ApiService apiService = RetrofitClient.getRetrofitInstance().create(ApiService.class);
         Call<List<Residuo>> call = apiService.obtenerResiduos();
@@ -155,7 +155,7 @@ public class InformeActivity extends AppCompatActivity {
                 public void onResponse(Call<Residuo> call, Response<Residuo> response) {
                     if (response.isSuccessful()) {
                         Toast.makeText(InformeActivity.this, "Residuo modificado con éxito", Toast.LENGTH_SHORT).show();
-                        mostrarDatos(); // Actualizar la tabla
+                        mostrarDatos();
                         dialog.dismiss();
                     } else {
                         Toast.makeText(InformeActivity.this, "Error al modificar el residuo en la API. Código: " + response.code(), Toast.LENGTH_SHORT).show();
@@ -264,10 +264,9 @@ public class InformeActivity extends AppCompatActivity {
             titulo.setAlignment(Element.ALIGN_CENTER);
             document.add(titulo);
 
-            // Añadir un espacio en blanco después del título
             document.add(new Paragraph(" ", new Font(Font.FontFamily.HELVETICA, 10))); // Un párrafo con un espacio
 
-            PdfPTable table = new PdfPTable(4); // 4 columnas
+            PdfPTable table = new PdfPTable(4);
             table.addCell("ID");
             table.addCell("Nombre");
             table.addCell("Tipo");
